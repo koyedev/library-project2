@@ -11,6 +11,7 @@ import AdminOverdueBooks from "./Pages/AdminOverdueBooks"
 import AdminAddBook from "./Pages/AdminAddBook"
 import BookDetails from "./Pages/BookDetails"
 import Register from "./Pages/Register"
+import Error404 from "./Pages/Error404"
 
 
 function App() {
@@ -23,6 +24,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/register" element={<Register />} />
+
+        <Route path="/*" element={<Error404/>}></Route>
         
         <Route path="dashboard" element={<Dashboard />} >
           <Route path="library" element={<Library />} />
@@ -31,6 +34,7 @@ function App() {
           <Route path="overdue-books" element={<OverdueBooks/>} />
         
         </Route>
+
  
         <Route path="admin" element={<Admin/>}>
           <Route path="books" element={<AdminBooks/>}  />

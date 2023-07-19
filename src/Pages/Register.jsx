@@ -43,11 +43,11 @@ function Register() {
               phone: formData.number,
               options: {
                 data: {
-                  firstname: formData.firstName,
-                  lastname: formData.lastName,
+                  firstname: formData.firstname,
+                  lastname: formData.lastname,
                   role: formData.role,
-                  phoneNo: formData.phoneNumber,
-                  address: formData.address,
+                  phoneNo: formData.number,
+                  address: formData.Address,
                   department: formData.department
   
                 }
@@ -57,6 +57,7 @@ function Register() {
           
           setLoading(false)
       console.log(error)
+      console.log(data)
       console.log(formData)
     // alert("Successfully Registered")
       }catch(error) {
@@ -82,7 +83,7 @@ function Register() {
 
       <div className="col-span-6  flex items-center">
         
-          <form onSubmit={handleSignup} className="w-8/12 grid grid-cols-2 gap-10 mx-auto">
+          <form onSubmit={handleSignup} className="w-8/12  grid grid-cols-2 gap-7 mx-auto">
 
               <input type="text" placeholder="Enter Firstname" value={formData.firstname} name="firstname" className="p-2 col-span-1 bg-[#edebeb] rounded-md" onChange={handleChange} required/>
               <input type="text" placeholder="Enter lastname" value={formData.lastname} name="lastname" className="p-2 col-span-1 bg-[#edebeb] rounded-md" onChange={handleChange} required/>
