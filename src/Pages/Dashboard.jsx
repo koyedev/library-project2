@@ -64,8 +64,8 @@ function Dashboard() {
 
     }
    return (
-    <div className="grid w-full grid-cols-12 ">
-            <div   className="bg-lightAsh min-w-max sticky  h-screen min-h-screen col-span-2">
+    <div className="grid w-full  grid-cols-12 ">
+            <div   className="bg-lightAsh h-screen  col-span-2">
                 <div className="flex items-center flex-col ">
                     <img src={Logo} className="h-40 w-40 mb-10" alt="Oau Logo" />
                     
@@ -104,13 +104,16 @@ function Dashboard() {
 
             </div>
 
-            <div className="col-span-10 p-4">
+            <div className="col-span-10 ">
                 
                 <Header
 
                 />
 
-                <Outlet />
+                <div className="p-6 mt-5 overflow-x-hidden overflow-y-auto">
+                   <Outlet />
+                </div>
+             
             </div>
 
            

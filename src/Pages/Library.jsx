@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react"
 import { supabase } from "../SupabaseClient"
-import Book1 from "../images/book1.svg"
 import { Link } from "react-router-dom"
 
 function Library() {
@@ -30,7 +29,7 @@ function Library() {
 
     }, [])
   return (
-    <div className="grid grid-cols-12 gap-4 ">
+    <div className="grid grid-cols-12 gap-5 overflow-y-scroll ">
          <p className="font-bold my-5 col-span-12 text-2xl">Library</p>
         
  
@@ -38,7 +37,8 @@ function Library() {
         
                     <div key={index} className="col-span-3 bg-verylightAsh">
                         <Link to={`/dashboard/library/bookdetails/${book.id}`}>
-                            <img src={Book1} className="w-full  " alt="Books" />
+                            <img src={book.image} className="w-full h-[300px] " alt="Books" />
+                            {/* <blockquote class="imgur-embed-pub" lang="en" data-id="a/W5D4U9D" data-context="false" ><a href="//imgur.com/a/W5D4U9D"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script> */}
 
                             <p className="p-2 bg-lightAsh w-20 rounded-xl font-bold my-2">{book.genre}</p>
 
@@ -49,66 +49,6 @@ function Library() {
                   
                 </div>
                 ))}
-    
-                    
-
-                   
-                    
-
-               
-                {/* <div className="grid grid-cols-12 gap-5 w-full">
-                    <div className="col-span-3 bg-verylightAsh">
-                        <img src={Book1} className="w-full  " alt="Books" />
-
-                        <p className="p-2 bg-lightAsh w-20 rounded-xl font-bold my-2">Medicine</p>
-
-                        <p className="my-2">Short desc Short desc Short desc</p>
-
-                        <p className="font-bold">John bell</p>
-                    </div>
-
-                   
-
-                    <div className="col-span-3 bg-verylightAsh">
-                        <img src={Book1} className="w-full  " alt="Books" />
-
-                        <p className="p-2 bg-lightAsh w-20 rounded-xl font-bold my-2">Medicine</p>
-
-                        <p className="my-2">Short desc Short desc Short desc</p>
-
-                        <p className="font-bold">John bell</p>
-                    </div>
-
-                    <div className="col-span-3 bg-verylightAsh">
-                        <img src={Book1} className="w-full  " alt="Books" />
-
-                        <p className="p-2 bg-lightAsh w-20 rounded-xl font-bold my-2">Medicine</p>
-
-                        <p className="my-2">Short desc Short desc Short desc</p>
-
-                        <p className="font-bold">John bell</p>
-                    </div>
-
-                    <div className="col-span-3 bg-verylightAsh">
-                        <img src={Book1} className="w-full  " alt="Books" />
-
-                        <p className="p-2 bg-lightAsh w-20 rounded-xl font-bold my-2">Medicine</p>
-
-                        <p className="my-2">Short desc Short desc Short desc</p>
-
-                        <p className="font-bold">John bell</p>
-                    </div>
-
-                    
-
-                    
-
-                </div>  */}
-
-
-       
-           
-
 
     </div>
   )

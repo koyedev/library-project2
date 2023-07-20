@@ -70,7 +70,7 @@ function BookDetails() {
   return (
     <div>
         <div className='grid grid-cols-12 gap-3'> 
-        <img className='col-span-4 h-full py-4 w-full' src={Book1} />
+        <img className='col-span-4 h-full py-4 w-full' src={Book[0]?.image} />
         <div className='flex flex-col col-span-7  px-3 gap-5 py-8'>
             <p><span className='font-bold'>Title : </span>{Book[0]?.title}  </p>
             <p><span className='font-bold'>Author : </span>{Book[0]?.author}  </p>

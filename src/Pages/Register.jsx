@@ -52,6 +52,9 @@ function Register() {
   
                 }
               }
+              , rate_limit: {
+                emails_per_hour: 100,
+              },
             }
           )
           
@@ -95,6 +98,7 @@ function Register() {
 
               
               <select className="p-2 col-span-1 bg-[#edebeb] rounded-md" name="role" onChange={handleChange} required>
+                <option>Role</option>
                 <option value="student">Student</option>
                 <option value="staff">staff</option>
               </select>
