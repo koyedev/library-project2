@@ -59,10 +59,28 @@ function Register() {
           )
           
           setLoading(false)
-      console.log(error)
-      console.log(data)
-      console.log(formData)
-    // alert("Successfully Registered")
+
+          if(data){
+            alert("Confirm your Email")
+            setFormData({
+              firstname : "",
+                lastname : "",
+                email : "",
+                Address : "",
+                number : "",
+                role : "",
+                department: "",
+                matricNo : "",
+                password : ""
+            })
+            setLoading(false)
+
+          }else{
+            alert(error)
+            setLoading(false)
+
+          }
+      
       }catch(error) {
         alert(error)
         setLoading(false)

@@ -29,26 +29,29 @@ function Library() {
 
     }, [])
   return (
-    <div className="grid grid-cols-12 gap-5 overflow-y-scroll ">
+    <div className="grid grid-cols-12 gap-5  overflow-x-hidden overflow-y-auto">
          <p className="font-bold my-5 col-span-12 text-2xl">Library</p>
         
- 
-                { books?.map((book, index) => (
-        
-                    <div key={index} className="col-span-3 bg-verylightAsh">
-                        <Link to={`/dashboard/library/bookdetails/${book.id}`}>
-                            <img src={book.image} className="w-full h-[300px] " alt="Books" />
-                            {/* <blockquote class="imgur-embed-pub" lang="en" data-id="a/W5D4U9D" data-context="false" ><a href="//imgur.com/a/W5D4U9D"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script> */}
+                
+            <div className="col-span-12 grid grid-cols-12 gap-5 h- no-scrollbar">
+                    { books?.map((book, index) => (
+                
+                <div key={index} className="col-span-3 bg-verylightAsh">
+                    <Link to={`/dashboard/library/bookdetails/${book.id}`}>
+                        <img src={book.image} className="w-full h-[300px] " alt="Books" />
+                        {/* <blockquote class="imgur-embed-pub" lang="en" data-id="a/W5D4U9D" data-context="false" ><a href="//imgur.com/a/W5D4U9D"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script> */}
 
-                            <p className="p-2 bg-lightAsh w-20 rounded-xl font-bold my-2">{book.genre}</p>
+                        <p className="p-2 bg-lightAsh w-20 rounded-xl font-bold my-2">{book.genre}</p>
 
-                            <p className="my-2 line-clamp-2">{book.long_description}</p>
+                        <p className="my-2 line-clamp-2">{book.long_description}</p>
 
-                            <p className="font-bold line-clamp-1">{book.author}</p>
-                        </Link>
-                  
+                        <p className="font-bold line-clamp-1">{book.author}</p>
+                    </Link>
+            
                 </div>
                 ))}
+            </div>
+                
 
     </div>
   )

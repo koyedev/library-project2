@@ -6,7 +6,7 @@ import BorrowedSVG from "../images/borrowed-books.svg"
 import OverdueSVG from "../images/overdue.svg"
 import Overview from "../images/overvie-logo.svg"
 import Profile from "../images/profile.svg"
-import Book1 from "../images/book1.svg"
+
 import Header from "../components/Header"
 
 
@@ -96,7 +96,7 @@ function Dashboard() {
 
                     <div className="flex items-center gap-2 mt-40">
                         <img src={Profile} className="" alt="" />
-                         <p className="">Alabi IyanuOluwa</p>
+                         <p className="">Koye Dev</p>
                     </div>
                     
                 </div>
@@ -110,7 +110,7 @@ function Dashboard() {
 
                 />
 
-                <div className="p-6 mt-5 overflow-x-hidden overflow-y-auto">
+                <div className="p-6 mt-5">
                    <Outlet />
                 </div>
              

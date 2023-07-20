@@ -54,8 +54,7 @@ function Login() {
       <div className="col-span-6  flex items-center">
         
           <form onSubmit={handleLogin} className="w-8/12 flex flex-col mx-auto">
-              
-             
+            
               <label htmlFor="email" className="text-lg font-[500] mb-2">Email</label>
               <input className="outline-none  bg-lightAsh rounded-md p-2 w-full" type="text" name="email" value={email} placeholder="Enter your Email" onChange={e => setEmail(e.target.value)} required /><br/>
               <label htmlFor="password" className="text-lg font-[500] mb-2">Password</label>

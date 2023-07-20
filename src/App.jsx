@@ -12,6 +12,7 @@ import AdminAddBook from "./Pages/AdminAddBook"
 import BookDetails from "./Pages/BookDetails"
 import Register from "./Pages/Register"
 import Error404 from "./Pages/Error404"
+import "./App.css"
 
 
 function App() {
