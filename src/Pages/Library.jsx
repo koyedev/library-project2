@@ -33,7 +33,7 @@ function Library() {
          <p className="font-bold my-5 col-span-12 text-2xl">Library</p>
         
                 
-            <div className="col-span-12 grid grid-cols-12 gap-5 h- no-scrollbar">
+            <div className="col-span-12 grid grid-cols-12 gap-5 h-96 no-scrollbar">
                     { books?.map((book, index) => (
                 
                 <div key={index} className="col-span-3 bg-verylightAsh">
